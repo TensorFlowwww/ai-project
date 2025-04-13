@@ -319,3 +319,5 @@ document.addEventListener('DOMContentLoaded', function () {
     loadInitialContent();
     searchInput.focus();
 });
+
+let name = "Danish khan";
