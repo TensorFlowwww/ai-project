@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIYGenix.AI - Discover DIY Hobbies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <aside class="tips-section">
+            <h2 id="tips-title"><span id="hobby-name">Hobby</span> Tips</h2>
+            <div id="tips-content" class="tips-content">
+                <!-- Tips will be added here dynamically -->
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div class="logo">
+                    <i class="fas fa-eye"></i>
+                    <h1>DIYGenix<span>.AI</span></h1>
+                </div>
+                <p class="tagline">Your ultimate hobby discovery platform</p>
+            </header>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search for a hobby (e.g., origami, woodworking)">
+                    <span id="clear-search" class="clear-search hidden">×</span> <!-- Clear button -->
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                    <button id="random-hobby-btn" title="Discover a random hobby"><i class="fas fa-dice"></i></button>
+                </div>
+                <button id="search-new-btn" class="search-new-btn">Search New</button> <!-- New button -->
+            </div>
+
+            <div class="content-area">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Finding hobby inspiration...</p>
+                </div>
+
+                <div id="initial-state" class="initial-state">
+                    <i class="fas fa-lightbulb"></i>
+                    <h2>Explore Hobbies</h2>
+                    <p>Discover popular hobbies or search above to get started</p>
+                    <div class="suggestions" id="dynamic-suggestions">
+                        <!-- Dynamic suggestions here -->
+                    </div>
+                    <div class="text-suggestions">
+                        <h3>Why Start a Hobby?</h3>
+                        <div id="text-suggestions-content">
+                            <!-- Text suggestions from Gemini API -->
+                        </div>
+                    </div>
+                    <div class="categories">
+                        <h3>Hobby Categories</h3>
+                        <div id="hobby-categories">
+                            <!-- Categories from Gemini API -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="results" class="results-container hidden">
+                    <div class="videos-section">
+                        <h2>Top Video Tutorials</h2>
+                        <div id="videos-grid" class="videos-grid">
+                            <!-- Videos from YouTube API -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message hidden">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Oops! Something went wrong. Please try again.</p>
+                </div>
+            </div>
+        </main>
+
+        <aside class="beginner-section">
+            <h2>Beginner Guide</h2>
+            <div id="beginner-content">
+                <!-- Beginner tips from Gemini API -->
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© 2025 DIYGenix.AI - Created by Danish Khan(12305960)</p>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-modal">×</span>
+            <div id="modal-video-player" class="modal-video-player">
+                <!-- Video iframe will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
